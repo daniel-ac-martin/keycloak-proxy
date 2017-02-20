@@ -173,7 +173,7 @@ func (r *oauthProxy) authenticationMiddleware() gin.HandlerFunc {
 			log.WithFields(log.Fields{
 				"email":     user.email,
 				"client_ip": clientIP,
-			}).Infof("accces token for user has expired, attemping to refresh the token")
+			}).Infof("access token for user has expired, attemping to refresh the token")
 
 			// step: check if the user has refresh token
 			refresh, err := r.retrieveRefreshToken(cx.Request, user)
